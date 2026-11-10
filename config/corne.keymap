@@ -20,6 +20,11 @@
 };
 
 / {
+    // ВАЖНО: Эта строка связывает led_strip с системой RGB в ZMK
+    chosen {
+        zmk,underglow = &led_strip;
+    };
+
     conditional_layers {
     compatible = "zmk,conditional-layers";
 
